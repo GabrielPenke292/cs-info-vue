@@ -15,4 +15,10 @@ app.get("/status", (req, res) => {
     });
 });
 
+app.post("/register", (req, res) => {
+    res.send({
+        message: `Usuário ${req.body.email} registrado com sucesso!`
+    });
+});
+
 app.listen(process.env.PORT || 8081);
